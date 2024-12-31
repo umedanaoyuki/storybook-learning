@@ -35,11 +35,10 @@ export const RightArrow = () => <svg
 
 <div className="sb-container">
   <div className='sb-section-title'>
-    # Configure your project
-
-    Because Storybook works separately from your app, you'll need to configure it for your specific stack and setup. Below, explore guides for configuring Storybook with popular frameworks and tools. If you get stuck, learn how you can ask for help from our community.
+    # 独自Storybookのサンプル
+    こちらは自分で作成したStorybookの紹介ページになります。
   </div>
-  <div className="sb-section">
+  {/* <div className="sb-section">
     <div className="sb-section-item">
       <img
         src={Styling}
@@ -202,13 +201,15 @@ export const RightArrow = () => <svg
           href="https://storybook.js.org/tutorials/"
           target="_blank"
         >Discover tutorials<RightArrow /></a>
-    </div>
+    </div> */}
 </div>
 
 <style>
   {`
   .sb-container {
     margin-bottom: 48px;
+    display: flex;
+    justify-content: center;
   }
 
   .sb-section {

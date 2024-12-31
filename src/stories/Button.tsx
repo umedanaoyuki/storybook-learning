@@ -25,6 +25,7 @@ interface ButtonProps {
 }
 
 /**
+ * こちらはStorybookデフォルトのUIになっています
  * Primary UI component for user interaction
  */
 export const Button = ({
