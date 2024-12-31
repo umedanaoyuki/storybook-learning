@@ -1,27 +1,58 @@
-# React + TypeScript + Vite
+# Storybook-Learning
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+勉強用に独自に作成したReactのUIコンポーネントをStorybookで管理しています
 
-Currently, two official plugins are available:
+## フロントエンド初心者向けのこのPJの立ち上げ方法
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```shell
+   git clone git@github.com:umedanaoyuki/storybook-learning.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+```shell
+   npm install
+```
+↑のコマンドで node_modulesというフォルダが作成されます
+
+```shell
+   npm run dev
+```
+↑のコマンドでReact+Viteのプロジェクトが立ち上がります(http://localhost:5173/)
+
+```shell
+   npm run storybook
+```
+↑のコマンドでStorybookが立ち上がります(http://localhost:6006/)
+
+
+ディレクトリーの構成はこのようになっています。
+
+これはStorybookの練習用なのでApp.tsxは特に何も変更していません。
+`Accordion`や`RadioGroup`のサンプルファイルを作ってみました。
+Storybookの雰囲気を見て皆さんもCSSとReactの練習のために、独自でUIを作ってみてください。
+
+参考にするサイトはたくさんありますが、以下のようなサイトで作られている代表的なコンポーネントを真似して、自己流で作ってみることをお勧めします。AIも使いながら調べて実装するとhtml/CSSの知識が非常につきます。
+
+- https://www.w3schools.com/howto/howto_js_accordion.asp
+
+- https://mui.com/material-ui/react-accordion/?srsltid=AfmBOoqfYM-i6OAEenkls-KgT945X2t-f1Rs5-DH6KKyFVjzDFcDlNeM
+
+- https://ui.shadcn.com/docs/components/accordion
+
+
+
+```shell
+Storybook-learning/
+├── src/
+│   └── stories/
+│       ├── Configure.tsx
+│       ├── Accordion/
+│       │   ├── accordion.css
+│       │   ├── Accordion.stories.ts
+│       │   └── Accordion.tsx
+│       ├── RadioGroup/
+│       │   ├── radioGroup.css
+│       │   ├── RadioGroup.stories.ts
+│       │   └── RadioGroup.tsx  
+│       └── Button
+└── App.tsx
+```
